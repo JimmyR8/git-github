@@ -194,5 +194,46 @@
 
             <li> <b>Diff</b>: Se utiliza para mostrar los cambios entre dos versiones del mismo archivo.</li><br>
         </ul>
+
+    <h1>Git & GitHub | Class #3</h1>
+        <ul>
+            <li>Para inicializar el repositorio git y el staged: <b>git init</b> </li>
+            <li>Enviar el archivo al staged: <b>git add nombre_del_archivo.txt</b> </li>
+            <li>Ver el estado, si se requiere agregar al starget o si se requiere commit: <b>git status</b> </li>
+            <li>Para ver las posibles configuraciones: <b>git conf</b> </li>
+            <li>Para ver las posibles configuraciones: <b>git conf --list</b> </li>
+            <li>Para mostrar las configuraciones y sus rutas: <b>para mostrar las configuraciones y sus rutas</b> </li>
+            <li>Para eliminar el archivo del staged(ram): <b>git rm --cached nombre_del_archivo.txt</b> </li>
+            <li>Para eliminar del repositorio: <b>para eliminar del repositorio</b> </li>
+        </ul>
+
+        <p>
+            Recuerda que Git está optimizado para trabajar en equipo, por lo tanto, debemos<br>
+            darle un poco de información sobre nosotros. No debemos hacerlo todas las veces<br>
+            que ejecutamos un comando, basta con ejecutar solo una sola vez los siguientes<br>
+            comandos con tu información:
+        </p>
+
+        <ul>
+            <li>git config --global user.email "tu@email.com"</li>
+            <li>git config --global user.name "Tu Nombre"</li>
+         </ul>
+
+         <p>
+            Si por algún motivo te equivocaste en el nombre o email que configuraste al principio, lo puedes modificar de la siguiente manera:
+         </p>
+
+         <ul>
+            <li>git config --global --replace-all user.name “Aquí va tu nombre modificado”</li>
+         </ul>
+
+         <p>
+            O si lo deseas eliminar y añadir uno nuevo
+        </p>
+
+        <ul>
+            <li>git config --global --unset-all user.name :Elimina el nombre del usuario</li>
+            <li>git config --global --add user.name “Aquí va tu nombre”</li>
+        </ul>
 </body>
 </html>
