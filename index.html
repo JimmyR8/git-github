@@ -246,5 +246,94 @@
             <li>Envía a otro repositorio remoto lo que estamos haciendo: <b>git push</b> </li>
             <li>Ver diferencias de un commit a otro commit: <b>git diff (identificador-de-commit) (identificador-de-commit)</b></li>
         </ul>
+
+    <h1>Git & GitHub | Class #5</h1>
+        <h2>¿Qué es el staging?</h2>
+        <p>
+            El staging es el lugar donde se guardan temporalmente los cambios, para luego ser<br>
+            llevados definitivamente al repositorio. El repositorio es el lugar donde se guardan<br>
+            todos los registros de los cambios realizados a los archivos.
+        </p>
+
+        <h3>¿Qué es el área de staging?</h3>
+        <p>
+            El área de staging se puede ver como un limbo donde nuestros archivos están por ser<br>
+            enviados al repositorio o ser regresados a la carpeta del proyecto.
+        </p>
+
+        <h3>Cómo funciona el staging y el repositorio: ciclo básico de trabajo en git:</h3>
+        <ul>
+            <p>
+                El flujo de trabajo básico en git es algo así:
+            </p>
+
+            <li>Modificas una serie de archivos en tu directorio de trabajo.</li>
+            <li>Preparas los archivos, añadiéndolos a tu área de preparación (staging).</li>
+            <li>Confirmas los cambios (commit), lo que toma los archivos tal y como están en el área de preparación y almacena 
+                esa copia instantánea de manera permanente en tu directorio de git.</li>
+        </ul>
+
+        <p>Veamos a detalle las 3 secciones principales que tiene un proyecto en git.</p>
+
+        <h3> <u>Working directory</u></h3>
+        <p>
+            El working directory es una copia de una versión del proyecto. Estos archivos se sacan<br>
+            de la base de datos comprimida en el directorio de git y se colocan en el disco para<br>
+            que los puedas usar o modificar.
+        </p>
+
+        <h3> <u>Staging area</u></h3>
+        <p>
+            Es un área que almacena información acerca de lo que va a ir en tu próxima confirmación. A veces se le denomina índice (index).
+        </p>
+
+        <h3> <u>.git directory (repository)</u></h3>
+        <p>
+            En el repository se almacenan los metadatos y la base de datos de los objetos para tu<br>
+            proyecto. Es la parte más importante de git (carpeta .git) y es lo que se copia cuando<br>
+            clonas un repositorio desde otra computadora.
+        </p>
+
+        <h3>Ciclo de vida o estados de los archivos en git</h3>
+        <p>
+            Cuando trabajamos con git, nuestros archivos pueden vivir y moverse entre 4<br>
+            diferentes estados (cuando trabajamos con repositorios remotos pueden ser más<br>
+            estados):
+        </p>
+
+        <h3> <u>Archivos tracked</u></h3>
+        <p>
+            Son los archivos que viven dentro de git, no tienen cambios pendientes y sus últimas<br>
+            actualizaciones han sido guardadas en el repositorio gracias a los comandos <b>git add</b> y <b>git commit</b>.
+        </p>
+
+        <h3> <u>Archivos staged</u></h3>
+        <p>
+            Son archivos en staging. Viven dentro de git y hay registro de ellos porque han sido<br>
+            afectados por el comando <b>git add</b>, aunque no sus últimos cambios. Git ya sabe de la<br>
+            existencia de estos últimos cambios, pero todavía no han sido guardados definitivamente en<br>
+            el repositorio porque falta ejecutar el comando <b>git commit</b>.
+        </p>
+
+        <h3> <u>Archivos unstaged</u></h3>
+        <p>
+            Entiéndelos como archivos “tracked pero unstaged”. Son archivos que viven dentro<br>
+            de git pero no han sido afectados por el comando <b>git add</b> ni mucho menos por <b>git commit</b>.<br>
+            Git tiene un registro de estos archivos, pero está desactualizado, sus últimas<br>
+            versiones solo están guardadas en el disco duro.
+        </p>
+
+        <h3> <u>Archivos untracked</u></h3>
+        <p>
+            Son archivos que NO viven dentro de git, solo en el disco duro. Nunca han sido<br>
+            afectados por <b>git add</b>, así que git no tiene registros de su existencia.
+        </p>
+        <p>
+            Recordar que hay un caso muy raro donde los archivos tienen dos estados al mismo<br>
+            tiempo: staged y untracked. Esto pasa cuando guardamos los cambios de un archivo en<br>
+            el área de staging (con el comando <b>git add</b>), pero antes de hacer commit para<br>
+            guardar los cambios en el repositorio haces nuevos cambios que todavía no han sido<br>
+            guardados en el área de staging.
+        </p>
 </body>
 </html>
