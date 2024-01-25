@@ -384,16 +384,15 @@
 
     <h2>Volver en el tiempo en nuestro repositorio utilizando reset y checkout</h2>
         <ul>
-            <li>Commit descriptivo con cantidad de líneas agregadas y removidas por archivo: <b>git log --stat</b> </li>
-            <li>Mantener cambios recientes pero borrarlos del historial del repo: <b>git reset --soft (id-commit)</b> </li>
-            <li>Borrar cambios recientes sin mantenerlos en el historial del repo: <b>git reset --hard (id-commit)</b> </li>
-            <li>Revisar cambios entre staging y modificaciones no agregadas a staging: <b>git diff</b> </li>
-            <li>Cambiar todos los cambios desde el commit actual al commit seleccionado sin borrar historial: <b>git checkout (id-commit|branch)</b> </li>
-            <li>Traer los cambios seleccionados de un archivo establecido desde otro commit: <b>git checkout (id-commit|branch) (file)</b> </li>
-            <li>: <b></b> </li>
-            <li>: <b></b> </li>
-            <li>: <b></b> </li>
-            <li>: <b></b> </li>
+            <li>Nos muestra el historial de commits hechos de el mas reciente hasta el mas viejo: <b>git log</b> </li>
+            <li>Nos muestra el historial de cambios especificos de cada commit desde el mas reciete hasta el mas viejo: <b>git log --stat</b> </li>
+            <li>Muestra los cambios hechos al archivo en el ultimo commit: <b>git show (nombre_del_archivo)</b> </li>
+            <li>Nos muestra las diferencias entres los cambios que estan en Staging y los que aun no se han añadido: <b>git diff</b> </li>
+            <li>Nos muestra las diferencias entre las dos versiones de los commits: <b>git diff (id-del-commit) (id-del-commit)</b> </li>
+            <li>Volvemos a nuestro archivo a la version del commit indicada, pero sin borrar los commits usados anteriormente: <b>git reset (id-del-commit) --soft</b> </li>
+            <li>Volvemos nuestro archivo a la version del commit indicada, BORRANDO TODOS los commits usados anteriores a la version del commit indicada: <b>git reset (id-del-commit) --hard</b> </li>
+            <li>Volvemos a nuestro archivo a la version del commit indicada, sin cambiar nada en el Staging: <b>git checkout (id-del-commit) (nombre_del_archivo)</b> </li>
+            <li>Volvemos a nuestro archivo a la version que teniamos antes de hacer el primer checkout, sin cambiar nada en el Staging: <b>git checkout master (nombre_del_archivo)</b> </li>
         </ul>
 </body>
 </html>
