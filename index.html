@@ -640,5 +640,30 @@
                 <li>Para saltar entre ramas, se usa el comando <b>git checkout (branch)</b></li>
                 <li>Una vez realizado los cambios en la rama, estas deben fusionarse con <b>git merge</b>.</li>
             </ul>
+
+    <h1>Git & GitHub | Class #13</h1>
+
+    <h2>Cómo funcionan las llaves públicas y privadas</h2>
+            <p>
+                Las llaves públicas y privadas, conocidas también como cifrado asimétrico de un solo camino, sirven<br>
+                para mandar mensajes privados entre varios nodos con la lógica de que firmas tu mensaje con una llave pública<br>
+                vinculada con una llave privada que puede leer el mensaje.<br><br>
+
+                Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos<br>
+                compartir sin correr el riesgo de que sean interceptados por personas con malas intenciones.
+            </p>
+    
+    <h3>Cómo funciona un mensaje cifrado con llaves públicas y privada</h3>
+            <ul>
+                <li>1. Ambas personas deben crear su llave pública y privada.</li>
+                <li>2. Ambas personas pueden compartir su llave pública a las otras partes (recuerda que esta llave es pública, no hay problema si la “interceptan”).</li>
+                <li>3. La persona que quiere compartir un mensaje puede usar la llave pública de la otra persona para cifrar los archivos y asegurarse que solo puedan ser descifrados con la llave privada de la persona con la que queremos compartir el mensaje.</li>
+                <li>4. El mensaje está cifrado y puede ser enviado a la otra persona sin problemas en caso de que los archivos sean interceptados.</li>
+                <li>5. La persona a la que enviamos el mensaje cifrado puede emplear su llave privada para descifrar el mensaje y ver los archivos.</li>
+            </ul>
+
+            <p>
+                <b>Nota: puedes compartir tu llave pública, pero nunca tu llave privada.</b>
+            </p>
 </body>
 </html>
