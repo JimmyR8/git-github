@@ -590,5 +590,55 @@
                 Git es asombroso porque puede saber cuáles cambios deben conservarse en una rama y cuáles no.<br>
                 En casos de conflictos, asegúrate de guardar tus cambios antes de hacer <b>git checkout</b> para evitar perder tu trabajo.
             </p>
+
+    <h1>Git & GitHub | Class #12</h1>
+        
+    <h2>Resolución de conflictos al hacer un merge</h2>
+            <p>
+                Git nunca borra nada, a menos que nosotros se lo indiquemos. Cuando usamos los comandos <b>git merge</b> o<br>
+                <b>git checkout</b> estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits<br>
+                (recuerda que puedes borrar commits con <b>git reset</b> y ramas con <b>git branch -d</b>).<br><br>
+        
+                Git es muy inteligente y puede resolver algunos conflictos automáticamente: cambios, nuevas líneas, entre otros.<br>
+                Pero algunas veces no sabe cómo resolver estas diferencias, por ejemplo, cuando dos ramas diferentes hacen cambio<br>
+                distintos a una misma línea.<br><br>
+        
+                Esto lo conocemos como <b>conflicto</b> y lo podemos resolver manualmente. Solo debemos hacer el merge, ir a nuestro editor de código<br>
+                y elegir si queremos quedarnos con alguna de estas dos versiones o algo diferente. Algunos editores de código como Visual Studio Code<br>
+                nos ayudan a resolver estos conflictos sin necesidad de borrar o escribir líneas de texto, basta con hacer clic en un<br>
+                botón y guardar el archivo.<br><br>
+
+                Recuerda que siempre debemos crear un nuevo commit para aplicar los cambios del merge. Si Git puede resolver el<br>
+                conflicto, hará commit automáticamente. Pero, en caso de no pueda resolverlo, debemos solucionarlo y hacer el commit.<br><br>
+        
+                Los archivos con conflictos por el comando <b>git merge</b> entran en un nuevo estado que conocemos como<br>
+                <b>Unmerged</b>. Funcionan muy parecido a los archivos en estado Unstaged, algo así como un estado intermedio entre Untracked<br>
+                y Unstaged. Solo debemos ejecutar <b>git add</b> para pasarlos al área de staging y <b>git commit</b> para aplicar los cambios en el repositorio.
+           </p>
+        
+    <h3>Cómo revertir un merge</h3>
+            <p>
+                Si nos hemos equivocado y queremos cancelar el merge, debemos usar el siguiente comando:
+            </p>
+        
+            <ul>
+                <li> <b>git merge --abort</b> </li>
+            </ul>
+        
+    <h3>Conflictos en repositorios remotos</h3>
+            <p>
+                Al trabajar con otras personas, es necesario utilizar un repositorio remoto.
+            </p>
+        
+            <ul>
+                <li>Para copiar el repositorio remoto al directorio de trabajo local, se utiliza el comando <b>git clone (url)</b>, y para enviar cambios al repositorio remoto se utiliza <b>git push</b>.</li>
+                <li>Para actualizar el repositorio local se hace uso del comando <b>git fetch</b>, luego se debe fusionar los datos traídos con los locales usando <b>git merge</b>.</li> <br><br>
+        
+                <li>Para traer los datos y fusionarlos a la vez, en un solo comando, se usa <b>git pull</b>.</li>
+                <li>Para crear commits rápidamente, fusionando <b>git add</b> y <b>git commit -m ""</b>, usamos <b>git commit -am ""</b>.</li>
+                <li>Para generar nuevas ramas, hay que posicionarse sobre la rama que se desea copiar y utilizar el comando <b>git branch (nombre)</b></li>
+                <li>Para saltar entre ramas, se usa el comando <b>git checkout (branch)</b></li>
+                <li>Una vez realizado los cambios en la rama, estas deben fusionarse con <b>git merge</b>.</li>
+            </ul>
 </body>
 </html>
