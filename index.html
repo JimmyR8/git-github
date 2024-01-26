@@ -506,6 +506,38 @@
             <li>Guardar los logs en un archivo txt: <b>git log > log.txt</b> </li>
         </ul>
 
+    <h1>Git & GitHub | Class #10</h1>
 
+    <h2>Introducción a las ramas o branches de Git</h2>
+            <p>
+                Las ramas (branches) son la forma de hacer cambios en nuestro proyecto sin afectar<br>
+                el flujo de trabajo de la rama principal. Esto porque queremos trabajar una parte muy<br>
+                específica de la aplicación o simplemente experimentar.<br><br>
+
+                La cabecera o <b>HEAD</b> representan la rama y el commit de esa rama donde estamos<br>
+                trabajando. Por defecto, esta cabecera aparecerá en el último commit de nuestra<br>
+                rama principal. Pero podemos cambiarlo al crear una rama (<b>git branch rama</b>, <b>git checkout -b rama</b>)<br>
+                o movernos en el tiempo a cualquier otro commit de cualquier otra rama con los comandos<br>
+                (<b>git reset id-commit</b>, <b>git checkout rama-o-id-commit</b>).
+            </p>
+    
+    <h3>Cómo funcionan las ramas en GIT</h3>
+            <p>
+                Las ramas son la manera de hacer cambios en nuestro proyecto sin afectar el flujo de trabajo de<br>
+                la rama principal. Esto porque queremos trabajar una parte muy específica<br>
+                de la aplicación o simplemente experimentar.
+            </p>
+
+            <ul>
+                <li>Agrega los archivos al <b>Git Repository</b> desde el <b>Working Directory</b>, solo funciona si los archivos previamente se les a echo <b>git add</b> previamente: <b>git commit -am "mensaje del commit"</b> </li>
+                <li>Con este comando se genera una nueva rama: <b>git branch (nombre-de-la-rama)</b> </li>
+                <li>Lista todas las ramas que existen: <b>git branch -i</b> </li>
+                <li>Con este comando puedes saltar de una rama a otra: <b>git checkout (nombre-de-la-rama)</b> </li>
+                <li>Elimina la rama. Con <b>-D</b> se fuerza el borrado: <b>git branch -d (nombre-de-la-rama)</b> </li>
+                <li>Genera una rama y nos mueve a ella automáticamente, Es decir, es la combinación de git branch y git checkout al mismo tiempo: <b>git checkout -b (nombre-de-la-rama)</b> </li>
+                <li>Permite renombrar una rama en una nueva rama: <b>git branch -m (nombre-de-la-rama) (nombre-de-la-nueva-rama)</b> </li>
+                <li>Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado: <b>git reset (id-commit)</b> </li>
+                <li>Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado: <b>git checkout (rama-o-id-commit)</b> </li>
+            </ul>
 </body>
 </html>
