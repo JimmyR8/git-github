@@ -539,5 +539,56 @@
                 <li>Nos lleva a cualquier commit no importa la rama, ya que identificamos el id del tag., eliminando el historial de los commit posteriores al tag seleccionado: <b>git reset (id-commit)</b> </li>
                 <li>Nos lleva a cualquier commit sin borrar los commit posteriores al tag seleccionado: <b>git checkout (rama-o-id-commit)</b> </li>
             </ul>
+
+    <h1>Git & GitHub | Class #11</h1>
+    
+    <h2>Fusión de ramas con Git merge</h2>
+            <p>
+                La fusión en Git es la forma en que este sistema une un historial bifurcado.<br>
+                El comando <b>git merge</b> permite integrar líneas de desarrollo independientes generadas<br>
+                por <b>git branch</b> en una sola rama. Con este comando, podemos crear un nuevo commit que combina<br>
+                dos ramas o branches: la rama actual y la rama que se indica después del comando.<br><br>
+
+                Estos comandos de fusión del merge afectan solo a la rama actual y no a la rama de destino.<br>
+                Por lo tanto, te recomendamos utilizar <b>git checkout</b> para seleccionar la rama actual y <b>git branch -d</b><br>
+                para eliminar la rama de destino obsoleta.
+            </p>
+    <h3>Funcionamiento de Git merge</h3>
+            <p>
+                Git merge fusiona secuencias de confirmaciones en un solo historial, generalmente para combinar<br>
+                dos ramas. Busca una confirmación de base común y genera una confirmación de fusión que representa<br>
+                la combinación de las dos ramas hasta el resultado final.
+            </p>
+
+    <h3>¿Cómo unir dos ramas en git?</h3>
+            <p>
+                Ahora bien, para combinar ramas en tu repositorio local, usa git checkout para cambiar a la rama donde deseas<br>
+                fusionar. Por lo general, esta es la rama principal. Luego, emplea git merge y especifica el nombre de la otra<br>
+                rama que deseas traer a esta rama. Ten en cuenta que esto es una combinación de avance rápido.
+            </p>
+
+    <h3>¿Cómo realizar un merge en git?</h3>
+            <p>
+                Para hacer un merge en Git, primero asegúrate de estar en la rama correcta. Después, usa el comando <b>git merge</b> seguido<br>
+                del nombre de la rama que quieres combinar. Por ejemplo, si quieres crear un nuevo commit en la rama master con los<br>
+                cambios de la rama cabecera, usa este comando:
+            </p>
+
+            <ul>
+                <li> <b>git checkout master</b> </li>
+                <li> <b>git merge cabecera</b> </li>
+            </ul>
+
+            <p>
+                Es importante tener en cuenta que en caso de haber conflictos, debes guardar tus<br>
+                cambios antes de hacer <b>git checkout</b> para evitar perder tu trabajo. También es recomendable<br>
+                emplear los comandos básicos de GitHub, como <b>git fetch</b>, <b>git push</b> y <b>git pull</b>, para mantener actualizado tu repositorio.<br><br>
+
+                En este ejemplo, vamos a crear un nuevo commit en la rama master combinando los cambios de una rama<br>
+                llamada cabecera: Otra opción es crear un nuevo commit en la rama cabecera combinando los cambios de cualquier otra rama:<br><br>
+
+                Git es asombroso porque puede saber cuáles cambios deben conservarse en una rama y cuáles no.<br>
+                En casos de conflictos, asegúrate de guardar tus cambios antes de hacer <b>git checkout</b> para evitar perder tu trabajo.
+            </p>
 </body>
 </html>
