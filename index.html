@@ -766,7 +766,7 @@
     <h3>Creación de etiquetas en Git</h3>
             <ul>
                 <li>Para crear una etiqueta, ejecuta el siguiente comando: <br><br>
-                <b>git tag (tagname)</b> </li>
+                <b>git tag -a v0.1 -m "Descripcion-de-la-etiqueta" (id-del-commit)</b> </li>
             </ul>
 
             <p>
@@ -889,6 +889,43 @@
     
                 <li>Es similar al <b>git show-branch</b> pero con mas datos: <br><br>
                     <b>git show-branch --all</b>
+                </li>
+            </ul>
+
+    <h1>Git & GitHub | Class #18</h1>
+
+    <h2>Configurar múltiples colaboradores en un repositorio de GitHub</h2>
+            <p>
+                Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero<br>
+                no pueden crear commits, ni ramas. Esto quiere decir que pueden copiar tu proyecto pero no<br>
+                colaborar con él. Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de<br>
+                ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.  
+            </p>
+
+    <h3>Cómo agregar colaboradores en GitHub</h3>
+            <li>Solo debemos entrar a la configuración de colaboradores de nuestro proyecto. Se encuentra en: <br><br>
+                <b>Repositorio > Settings > Collaborators</b>
+            </li>
+            
+            <p>
+                Ahí, debemos añadir el email o username de los nuevos colaboradores. <br><br>
+
+                Si, como colaborador, agregaste erróneamente el mensaje del commit, lo puedes cambiar de la siguiente manera:
+            </p>
+
+            <ul>
+                <li>Hacer un commit con el nuevo mensaje que queremos, esto nos abre el editor de texto de la terminal: <br><br>
+                    <b>git commit —amend</b><br><br>
+                </li>
+
+                <li>Corregimos el mensaje</li><br>
+
+                <li>Traer el repositorio remoto: <br><br>
+                    <b>git pull orgin master</b><br><br>
+                </li>
+
+                <li>Ejecutar el cambio: <br><br>
+                    <b>git push --set-upstream origin master</b>
                 </li>
             </ul>
 </body>
