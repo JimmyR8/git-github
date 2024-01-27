@@ -841,6 +841,55 @@
                 <li>
                     <b>git log --all --graph --decorate --oneline</b>
                 </li>
-            </ul>        
+            </ul>      
+            
+    <h1>Git & GitHub | Class #17</h1>
+
+    <h2>Manejo de ramas en GitHub</h2>
+            <p>
+                Las ramas nos permiten hacer cambios a nuestros archivos sin modificar la versión principal (master).<br>
+                Puedes trabajar con ramas que nunca envías a GitHub, así como pueden haber ramas importantes en GitHub<br>
+                que nunca usas en el repositorio local. Lo crucial es que aprendas a manejarlas para trabajar profesionalmente.<br><br>
+
+                Si, estando en otra rama, modificamos los archivos y hacemos commit, tanto el historial(git log) como los archivos<br>
+                serán afectados. La ventaja que tiene usar ramas es que las modificaciones solo afectarán a esa rama en particular.<br>
+                Si luego de “guardar” los archivos(usando <b>commit</b>) nos movemos a otra rama (<b>git checkout</b> otraRama)<br>
+                veremos como las modificaciones de la rama pasada no aparecen en la <b>otraRama</b>.
+            </p>
+
+    <h3>Comandos para manejo de ramas en GitHub</h3>
+            <ul>
+                <li>Crear una rama: <br><br>
+                    <b>git branch (nombre-de-la-rama)</b>
+                </li><br>
+        
+                <li>Movernos a una rama: <br><br>
+                    <b>git checkout (nombre-de-la-rama)</b>
+                </li><br>
+                    
+                <li>Crear una rama en el repositorio local: <br><br>
+                    <b>git branch nombre-de-la-rama</b> o <b>git checkout -b nombre-de-la-rama</b>
+                </li><br>
+        
+                <li>Publicar una rama local al repositorio remoto: <br><br>
+                    <b>git push origin (nombre-de-la-rama)</b>
+                </li>
+            </ul>
+
+            <p>
+                Podemos ver gráficamente nuestro entorno y flujo de trabajo local con Git utilizando el comando <b>gitk</b>. Gitk fue<br>
+                el primer visor gráfico que se desarrolló para ver de manera gráfica el historial de un repositorio de Git.
+            </p>
+    
+    <h3>Comandos importantes para manejar ramas</h3>
+            <ul>
+                <li>Nos muestra cuales son las ramas que existen y cual es su historia: <br><br>
+                    <b>git show-branch</b>
+                </li><br>
+    
+                <li>Es similar al <b>git show-branch</b> pero con mas datos: <br><br>
+                    <b>git show-branch --all</b>
+                </li>
+            </ul>
 </body>
 </html>
