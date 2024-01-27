@@ -692,5 +692,39 @@
                 <li>Encender el “servidor” de llaves SSH de tu computadora: <b>eval $(ssh-agent -s)</b> </li>
                 <li>Añadir tu llave SSH a este “servidor”: <b>ssh-add ruta-donde-guardaste-tu-llave-privada</b> </li>
             </ul>
+
+    <h1>Git & GitHub | Class #14</h1>
+
+    <h2>Uso de GitHub</h2>
+            <p>
+                GitHub es una plataforma que nos permite guardar repositorios de Git que podemos usar como servidores remotos<br>
+                y ejecutar algunos comandos de forma visual e interactiva (sin necesidad de la consola de comandos).
+            </p>
+
+    <h3>Cómo conectar un repositorio de GitHub a nuestro documento local</h3>
+            <p>
+                Si queremos conectar el repositorio de GitHub con nuestro repositorio local, que creamos usando<br>
+                el comando <b>git init</b>, debemos ejecutar las siguientes instrucciones:
+            </p>
+
+            <ul>
+                <li>1. Guardar la URL del repositorio de GitHub con el nombre de origin:<br><br>
+                    <b>git remote add origin URL</b>  </li> <br>
+
+                <li>2. Verificar que la URL se haya guardado correctamente: <br><br>
+
+                <b>git remote</b> <br>
+                <b>git remote -v</b> </li><br>
+
+                <li>3. Traer la versión del repositorio remoto y hacer merge para crear un<br>
+                    commit con los archivos de ambas partes. Podemos usar <b>git fetch</b> y <b>git merge</b><br>
+                    o solo <b>git pull</b> con el flag <b>--allow-unrelated-histories</b>: <br><br>
+
+                    <b>git pull origin master</b> --allow-unrelated-histories</li> <br>
+
+                <li>4. Por último, ahora sí podemos hacer <b>git push</b> para guardar los cambios de nuestro repositorio local en GitHub: <br><br>
+
+                    <b>git push origin master</b></li>
+            </ul>
 </body>
 </html>
