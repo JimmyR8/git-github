@@ -973,5 +973,105 @@
                 <li>La persona que tiene la responsabilidad de aceptar los pull request y hacer los merge tienen un perfil especial y son llamados DevOps</li>
             </ul>
 
+    <h1>Git & GitHub | Class #21</h1>
+
+    <h2>Utilizando Pull Requests en GitHub</h2>
+            <p>
+                Un Pull Request es una función de GitHub que permite a tu equipo solicitar la revisión y aprobación<br>
+                de sus cambios antes de fusionarlos en la rama principal de desarrollo, denominada “master” o “main”.<br><br>
+
+                Al crear un PR se genera una conversación en la que los demás miembros pueden seguir y comentar los cambios propuestos<br>
+                en el código del repositorio. Esto permite detectar cualquier error o problema potencial<br>
+                antes de integrarlos en la rama principal, lo que ayuda a mantener el proyecto más limpio y estable.
+            </p>
+
+    <h3>Estructura de la incorporación de cambios</h3>
+            <p>
+                El proceso para hacer un pull request consiste en indicar la rama y repositorio de origen y destino. De<br>
+                esta forma, un desarrollador podrá incluir tus cambios en su proyecto.<br><br>
+
+                Bitbucket tiene una configuración predeterminada que funciona para la mayoría de los equipos, pero<br>
+                cada equipo puede personalizarla para ajustarla a su propio flujo de trabajo.
+            </p>
+
+    <h3>Cómo hacer un pull request</h3>
+            <p>
+                Un PR es un proceso crucial para facilitar la revisión y la integración efectiva del código. A<br>
+                continuación, veremos el paso a paso.
+            </p>
+
+    <h3>Solicitando un pull request</h3>
+            <p>
+                <b>1</b>. <b>Crea una rama paralela</b>: Antes de hacer cambios en el código, utiliza el comando <b>git checkout -b (rama)</b> para crear una<br>
+                nueva rama. Así, podrás hacer tus modificaciones sin afectar la rama principal (por ejemplo, <b>master</b>).<br><br>
+
+                <b>2</b>. <b>Realiza commits</b>: Después de hacer cambios en los archivos, usa <b>git commit -am '(comentario)'</b> para<br>
+                hacer un commit con un mensaje descriptivo.<br><br>
+
+                <b>3</b>. <b>Sube los cambios</b>: Usa <b>git push origin (rama)</b> para subir tus cambios de la rama local al<br>
+                repositorio remoto. Reemplaza <b>(rama)</b> con el nombre de tu rama.<br><br>
+
+                <b>4</b>. <b>Crea un pull request</b>: En el repositorio remoto (como GitHub), crea un<br>
+                nuevo pull request. Selecciona la rama principal como destino y tu rama con los cambios como comparación.<br><br>
+
+                <b>5</b>. <b>Feedback</b>: Los revisores examinarán los cambios. Usa la sección de comentarios del pull request<br>
+                para discutir los cambios y proporcionar feedback adicional.<br><br>
+
+                <b>6</b>. <b>Realiza los cambios solicitados</b>: Si se solicitan cambios, regresa a tu rama local y haz las modificaciones
+                necesarias. Luego, sube los cambios al repositorio remoto usando <b>git push origin (rama)</b>.
+            </p>
+
+    <h3>Aceptando un pull request</h3>
+            <p>
+                <b>1</b>. Acepta los cambios en GitHub: Si estás satisfecho con los cambios propuestos en el pull request<br>
+                y consideras que están listos para ser fusionados con la rama principal, acepta el pull request en<br>
+                GitHub. De esta forma, los cambios se fusionarán en la rama principal del repositorio.<br><br>
+
+                <b>2</b>. Realiza el merge en la rama principal: Después de aceptar el pull request, selecciona la<br>
+                opción para realizar el merge en GitHub. Esto combinará los cambios de la rama con los cambios existentes en la rama principal (master).<br><br>
+
+                Para solicitar y aceptar pull requests de manera efectiva, sigue estos sencillos pasos que te ayudarán<br>
+                a facilitar la colaboración y la mejora continua del código en tu proyecto.
+            </p>
+
+    <h3>¿Cómo corregir un Pull Request?</h3>
+            <p>
+                Al revisar un pull request, es posible encontrar problemas o áreas que necesiten corrección antes de que<br>
+                los cambios se puedan unir con la rama principal. Aquí se explica cómo corregir un pull request de forma efectiva.<br><br>
+
+                <b>1</b>. <b>Lee los comentarios y feedback</b>: Comprueba cuidadosamente todos los comentarios<br>
+                y feedback proporcionados por los revisores en el pull request<br><br>
+
+                <b>2</b>. <b>Regresa a tu rama local</b>: Utiliza el comando <b>git checkout (rama)</b> para volver a la rama en la que<br>
+                realizaste los cambios y necesitas revisar.<br><br>
+
+                <b>3</b>. <b>Realiza las modificaciones</b>: Basándote en los comentarios y feedback recibidos, efectúa las revisiones necesarias<br>
+                en los archivos relevantes. Asegúrate de abordar todos los problemas señalados y seguir las sugerencias de mejora proporcionadas.<br><br>
+
+                <b>4</b>. <b>Realiza un nuevo commit</b>: Después de efectuar las correcciones, utiliza el comando <b>git commit -am '(comentario)'</b> para<br>
+                crear un nuevo commit que refleje las correcciones realizadas. Asegúrate de proporcionar<br>
+                un mensaje claro y descriptivo para indicar las modificaciones realizadas.<br><br>
+
+                <b>5</b>. <b>Sube los cambios al repositorio remoto</b>: Utiliza el comando <b>git push origin (rama)</b><br>
+                para subir los cambios corregidos a la rama correspondiente en el repositorio remoto.<br><br>
+
+                <b>6</b>. <b>Actualiza el pull request</b>: Una vez que los cambios corregidos se hayan subido al repositorio<br>
+                remoto, el pull request se actualizará automáticamente para reflejar las modificaciones<br>
+                procedidas en la rama. Los revisores podrán ver los nuevos cambios y comentarios.<br><br>
+
+                <b>7</b>. <b>Comunica las correcciones realizadas</b>: Si consideras que has abordado adecuadamente los problemas señalados y las<br>
+                sugerencias de mejora, puedes comunicar a los revisores que has realizado las correcciones<br>
+                necesarias y que el pull request está listo para ser revisado nuevamente.
+            </p>
+    <h3>Es hora de administrar tus pull requests</h3>
+            <p>
+                Al seguir estos pasos, podrás revisar un pull request de manera efectiva, asegurándote de abordar los problemas<br>
+                identificados y proporcionar una versión mejorada de los cambios propuestos. La comunicación abierta<br>
+                y clara con los revisores es fundamental durante este proceso para garantizar una colaboración exitosa.<br><br>
+
+                Recuerda que cualquier modificación que realices en una rama también modificará el pull request, así<br>
+                que es importante que procedas con los cambios necesarios y los subas de nuevo al repositorio remoto<br>
+                antes de aceptar el pull request.
+            </p>
 </body>
 </html>
