@@ -1158,5 +1158,31 @@
                 Nota: Siempre se debe proteger el archivo .git. Dependiendo del software para el servidor web, existen diferentes<br>
                 maneras. La conexión entre GitHub y el servidor se puede realizar mediante: Travis (pago) o Jenkis (Open source).
             </p>
+
+    <h1>Git & GitHub | Class #24</h1>
+
+    <h2>Ignorar archivos en el repositorio con .gitignore</h2>
+            <p>
+                No todos los archivos que agregas a un proyecto deberían ir a un repositorio. Por<br>
+                ejemplo, cuando tienes un archivo donde están tus contraseñas que comúnmente tienen la extensión<br>
+                <b>.env</b> o cuando te estás conectando a una base de datos; <b>son archivos que nadie debe ver</b>.<br><br>
+
+                Por diversas razones, no todos los archivos que agregas a un proyecto deberían guardarse en un<br>
+                repositorio. Esto es porque hay archivos que no todo el mundo debería de ver, y hay archivos que al<br>
+                estar en el repositorio ralentizan el proceso de desarrollo (por ejemplo: los binary large objects, blob, que<br>
+                tardan en descargarse).<br><br>
+
+                Para que no se suban estos archivos no deseados se puede crear un archivo con el nombre .gitignore en<br>
+                la raíz del repositorio con las reglas para los archivos que no se deberían subir: Aquí puedes ver la<br>
+                sintaxis de los .gitignore.<br><br>
+
+                Las razones principales para tomar la decisión de no agregar un archivo a un repositorio son:
+            </p>
+
+            <ul>
+                <li>Es un archivo con contraseñas (normalmente con la extensión <b>.env</b>)</li>
+                <li>Es un <b>blob</b> (binary large object, objeto binario grande), mismos que son difíciles de gestionar en git.</li>
+                <li>Son archivos que se generan corriendo comandos, por ejemplo la carpeta <b>node_modules</b>, que genera <b>npm</b> al correr el comando npm install</li>
+            </ul>
 </body>
 </html>
