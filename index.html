@@ -1227,5 +1227,59 @@
             <p>
                 Después de esto, podremos ver nuestro trabajo en la web como si tuviéramos nuestro propio servidor.
             </p>
+
+    <h1>Git & GitHub | Class #27</h1>
+
+    <h2>Git Rebase: reorganizando el trabajo realizado</h2>
+            <p>
+                Rebase es el proceso de mover o combinar una secuencia de confirmaciones en una nueva confirmación base. La<br>
+                reorganización es muy útil y se visualiza fácilmente en el contexto de un flujo de trabajo de ramas de<br>
+                funciones. El proceso general se puede visualizar de la siguiente manera.<br><br>
+
+            
+                <img src="https://static.platzi.com/media/user_upload/rebase1-45694a4e-3411-4785-8d6a-1545057ee1fc.jpg" width="20%"> <br><br>
+            
+
+                Para hacer un rebase en la rama feature de la rama master, correrías los siguientes comandos:
+            </p>
+
+            <ul>
+                <li> <b>git checkout feature</b> </li>
+                <li> <b>git rebase master</b> </li>
+            </ul>
+
+            <p>
+                Esto trasplanta la rama feature desde su locación actual hacia la punta de la rama master: <br><br>
+
+                <img src="https://static.platzi.com/media/user_upload/rebase2-3bcb1804-1167-4d2f-af90-c7fed7a7fd6c.jpg" width="20%">
+            </p>
+
+            <p>
+                Ahora, falta fusionar la rama feature con la rama master
+            </p>
+
+            <ul>
+                <li> <b>git checkout master</b> </li>
+                <li> <b>git rebase feature</b> </li>
+                <li> <b># No reorganices el historial público</b> </li>
+            </ul>
+
+            <p>
+                Nunca debes reorganizar las confirmaciones una vez que se hayan enviado a un<br>
+                repositorio público. La reorganización sustituiría las confirmaciones antiguas por las nuevas<br>
+                y parecería que esa parte del historial de tu proyecto se hubiera desvanecido de repente.<br><br>
+
+                El comando rebase es **_una mala práctica, sobre todo en repositorios remotos. Se debe evitar su uso, pero<br>
+                para efectos de práctica te lo vamos a mostrar, para que hagas tus propios experimentos. Con <b>rebase</b> puedes<br>
+                recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
+            </p>
+
+            <ul>
+                <li># Cambiamos a la rama que queremos traer los cambios <br>
+                <b>git checkout experiment</b> </li>
+                <li># Aplicamos rebase para traer los cambios de la rama que queremos <br>
+                <b>git rebase master</b> </li>
+            </ul>
+
 </body>
 </html>
