@@ -1129,5 +1129,34 @@
                 <li> <b>git pull upstream master</b> </li>
                 <li> <b>git push origin master</b> </li>
             </ul>
+
+    <h1>Git & GitHub | Class #23</h1>
+
+    <h2>Haciendo deployment a un servidor</h2>
+            <p>
+                Deploy es el proceso que permite enviar al servidor uno o varios archivos. Este<br>
+                servidor puede ser de prueba, desarrollo o producción.<br><br>
+                
+                En el siguiente ejemplo veremos cómo se realiza el deployment de un documento en un servidor web básico.
+            </p>
+    
+    <h3>Pasos para hacer deployment en un servidor web:</h3>
+            <ul>
+                <li>Entrar a la capeta de los archivos del servidor.</li>
+                <li>Copiar link en clone, elegir entre HTTPS o SSH del repositorio a contribuir.<br>
+                    -En la carpeta deseada se clona el repositorio: <br><br> 
+                <b>git clone url</b><br>
+                <b>Deploy:</b>
+                </li> <br>
+
+                <li>Realizar cambios y commit en GitHub.</li>
+                <li>Traer al Repositorio local las actualizacion para el servidor en la capeta de los archivos del servidor. <br><br>
+                <b>git pull ramaRemota main</b></li>
+            </ul>
+
+            <p>
+                Nota: Siempre se debe proteger el archivo .git. Dependiendo del software para el servidor web, existen diferentes<br>
+                maneras. La conexión entre GitHub y el servidor se puede realizar mediante: Travis (pago) o Jenkis (Open source).
+            </p>
 </body>
 </html>
