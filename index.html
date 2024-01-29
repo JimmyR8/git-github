@@ -1281,5 +1281,29 @@
                 <b>git rebase master</b> </li>
             </ul>
 
-</body>
+    <h1>Git & GitHub | Class #28</h1>
+
+    <h2>Cómo usar Git Stash: guarda cambios temporalmente</h2>
+            <p>
+                El comando git stash te permite almacenar temporalmente (o guardar en un stash),<br>
+                los cambios que hayas efectuado en el código en el que estás trabajando para que<br>
+                puedas trabajar en otra cosa y, más tarde, regresar y volver a aplicar los cambios.<br><br>
+
+                Guardar los cambios en stashes resulta práctico si tienes que cambiar rápidamente de contexto<br>
+                y ponerte con otra cosa, pero estás en medio de un cambio en el código y no tienes<br>
+                todo listo para confirmar los cambios.<br><br>
+
+                <b>Git stash</b> lo puedes usar sin necesidad de crear una nueva rama o hacer<br>
+                un commit. Además, no pierdes tus cambios.
+            </p>
+
+            <ul>
+                <li>Guarda los cambios temporalmente en memoria cuando no quieres hacer un commit aun: <b>git stash</b> </li>
+                <li>Guarda un stach con mensaje: <b>git stash save “mensaje”</b> </li>
+                <li>Muestra la lista de cambios temporales: <b>git stash list</b> </li>
+                <li>Trae de vuelta los cambios que teníamos guardados en el ultimo stash: <b>git stash pop</b> </li>
+                <li>Trae el stash que necesites con indicar su número dentro de las llaves: <b>git stash apply stash@{n}</b> </li>
+                <li>Borra el ultimo stash: <b>git stash drop</b> </li>
+                <li>Borra todos los stash: <b>git stash clear</b> </li>
+            </ul>
 </html>
