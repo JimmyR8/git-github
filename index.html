@@ -1587,4 +1587,24 @@
                 Este comando es una manera práctica de modificar la información más reciente de<br>
                 nuestro repositorio.
             </p>
+
+    <h1>Git & GitHub | Class #33</h1>
+
+    <h2>Buscar en archivos y commits de Git con Grep y log</h2>
+            <p>
+                A medida que nuestro proyecto en Git se hace más grande, vamos a querer buscar
+                ciertas cosas.
+
+                Por ejemplo: ¿cuántas veces en nuestro proyecto utilizamos la palabra color?
+
+                Para buscar, empleamos el comando git grep color y nos buscará en todo el
+                proyecto los archivos en donde está la palabra color.
+            </p>
+
+            <ul>
+                <li>Con <b>git grep -n color</b> nos saldrá un output el cual nos dirá en qué línea está lo que estamos buscando.</li>
+                <li>Con <b>git grep -c color</b> nos saldrá un output el cual nos dirá cuántas veces se repite esa palabra y en qué archivo.</li>
+                <li>Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con <b>git grep -c "etiqueta-a-buscar"</b>.</li>
+            </ul>
+
 </html>
