@@ -1443,4 +1443,63 @@
             <p>
                 Esto significa que puedes hacer las correcciones necesarias en tu rama local y volver a intentar el cherry-pick si así lo deseas.
             </p>
+
+    <h1>Git & GitHub | Class #31</h1>
+
+    <h2>Git Reset y Reflog: úsese en caso de emergencia</h2>
+            <p>
+                Git guarda todos los cambios aunque decidas borrarlos, al borrar un cambio lo que<br>
+                estás haciendo sólo es actualizar la punta del branch, para gestionar éstas puntas<br>
+                existe un mecanismo llamado registros de referencia o reflogs…La gestión de estos<br>
+                cambios es mediante los hash’es de referencia (o ref) que son apuntadores a los<br>
+                commits…Los recoges registran cuándo se actualizaron las referencias de Git en el<br>
+                repositorio local (sólo en el local), por lo que si deseas ver cómo has modificado la<br>
+                historia puedes utilizar el comando:
+            </p>
+
+            <ul>
+                <li> <b>git reflog</b> </li>
+            </ul>
+
+            <p>
+                Muchos comandos de Git aceptan un parámetro para especificar una referencia o <br>    
+                “ref”, que es un puntero a una confirmación sobre todo los comandos:
+            </p>
+
+            <ul>
+                <li> <b>git checkout</b> puedes moverte sin realizar ningun cambio al commit exacto de la <b>ref</b> <br><br>
+                <b>git checkout eff544f</b>
+               </li><br>
+            
+                <li> <b>git reset</b>: Hara que el ultimo commit sea el pasado por la <b>ref</b>, usar este <br>
+                    comando solo si sabes exactamente que estas haciendo <br><br>
+
+                    git reset --hard eff544f # Perderá todo lo que se encuentra en staging y en el Working<br>
+                    directory y se moverá el head al commit eff544f<br><br>
+
+                    git reset --soft eff544f # Te recuperará todos los cambios que tengas diferentes al<br>
+                    commit eff544f, los agregará al staging area y moverá el head al commit eff544f
+                </li><br>
+
+                <li>
+                    <b>git merge</b>: Puedes hacer merge de un commit en específico, funciona igual
+                    que con una branch, pero te hace el merge del estado específico del commit
+                    mandado <br><br>
+
+                    git checkout master <br><br>
+
+                    git merge eff544f # Fusionará en un nuevo commit la historia de master con el<br>
+                     momento específico en el que vive
+                </li>
+            </ul>
+
+            <p>
+                ¿Qué pasa cuando todo se rompe y no sabemos qué está pasando? Con <b>git reset <br>
+                HashDelHEAD</b> nos devolveremos al estado en que el proyecto funcionaba.
+            </p>
+
+            <ul>
+                <li><b>git reset --soft HashDelHEAD</b> te mantiene lo que tengas en staging ahí.</li>
+                <li><b>git reset --hard HashDelHEAD</b> resetea absolutamente todo incluyendo lo que tengas en staging.</li>
+            </ul>
 </html>
