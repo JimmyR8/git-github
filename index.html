@@ -1339,4 +1339,108 @@
             <ul>
                 <li> <b>git clean -f</b> </li>
             </ul>
+
+    <h1>Git & GitHub | Class #30</h1>
+
+    <h2>Git cherry-pick: traer commits antiguos al head del branch</h2>
+            <p>
+                Git cherry-pick es un comando en Git que selecciona y aplica commits específicos de<br>
+                una rama o branch a otra. Todo, sin tener que hacer un merge completo. Así, podemos<br>
+                copiar un commit específico y aplicarlo de forma aislada en la rama de destino, conservando su historial.<br><br>
+
+                <img src="https://static.platzi.com/media/user_upload/git-cherry-pick-antes-1084cd3d-26ea-498b-8097-4109ca3d8d99.jpg" alt="" width="30%"> <br>
+                <img src="https://static.platzi.com/media/user_upload/git-cherry-pick-despues2-5f7c6919-c217-409f-a021-b2950183c5bd.jpg" alt="" width="30%">
+            </p>
+
+    <h3>Escenarios de uso de Git Cherry Pick</h3>
+            <p>
+                Este comando facilita la incorporación precisa de cambios, optimizando la colaboración y el mantenimiento<br>
+                en proyectos de desarrollo de software. Veamos sus casos de uso.
+            </p>
+
+    <h3>1. Colaboracion en equipo</h3>
+            <p>
+                Antes que nada, puede ser útil implementarlo cuando diferentes miembros del equipo trabajan en<br>
+                áreas similares del código, pues permite seleccionar y aplicar commits específicos a <br>
+                cada rama, facilitando el progreso individual.
+            </p>
+
+    <h3>2. Solucion de bugs o errores</h3>
+            <p>
+                Cuando encuentras un error o bug, es importante solucionarlo y entregar la corrección a los<br>
+                usuarios lo más rápido posible. Con Git Cherry Pick, puedes aplicar rápidamente un commit<br>
+                de verificación en la rama principal, evitando que afecte a más usuarios.
+            </p>
+
+    <h3>3. Deshacer cambios y recuperar commits perdidos</h3>
+            <p>
+                A veces, una rama de funcionalidad puede ser obstoleta y no ser fusionada con la rama<br>
+                principal. O puede suceder que una solicitud de extracción (pull request)<br>
+                sea cerrada sin ser fusionada.<br><br>
+
+                Git nunca pierde esos commits y, a través de comandos como <b></b> y <b>git reflog</b>, puedes<br>
+                encontrar y aplicar los commits utilizando Git Cherry Pick.
+            </p>
+
+    <h3>¿Cómo funciona Git Cherry Pick? Ejemplos</h3>
+            <p>
+                Imaginemos que tienes un repositorio con el siguiente estado de las ramas:
+            </p>
+            
+            <ul>
+                <li>a - b - c - d   Rama Principal <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \\ <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e - f - g Rama de Características</li>
+            </ul>
+
+            <p>
+                El uso de Git Cherry Pick es bastante sencillo y se ejecuta de la siguiente manera:<br><br>
+            
+                1. Primero, asegurate de estar en la rama principal empleando el comando <b>git checkout rama-principal.</b><br>
+            
+                2. Luego, ejecuta el siguiente comando:
+            </p>
+
+            <ul>
+                <li> <b>git cherry-pick (commitSha)</b> </li>
+            </ul>
+
+            <p>
+                Aqui, <b>commitSha</b> es una referencia al commit que deseas aplicar. Puedes encontrar<br>
+                la referencia del commit utilizando el comando <b>git log</b>. Supongamos que deseas<br>
+                usar el commit "f" en la rama principal<br><br>
+
+                Una vez ejecutado el comando, el historial de Git se vera asi:
+            </p>
+
+            <ul>
+                <li>a - b - c - d - f   Rama Principal <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \\ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e - f - g Rama de Características</li>    
+            </ul>
+
+            <p>
+                De esta forma, el commit "f" se ha incorporado correctamente a la rama principal.<br><br>
+
+                El uso de Git Cherry Pick debería aplicarse con sabiduría, ya que puede generar<br>
+                duplicación de commits y complicaciones en el historial de cambios. Sin embargo, si<br>
+                sabes lo que estás haciendo, ¡adelante! Solo asegúrate de evitar su utilización si no estás seguro.
+            </p>
+
+    <h3>¿Cómo deshacer este comando en caso de conflicto?</h3>
+            <p>
+                Supongamos que estás usando GitHub para colaborar con un equipo en un proyecto y<br>
+                has realizado un cherry-pick de un commit de otra rama en tu rama local, pero ocurren<br>
+                conflictos durante este proceso y deseas detenerlo y volver al estado anterior.<br><br>
+
+                Por suerte, en ese caso, puedes emplear el siguiente comando.
+            </p>
+
+            <ul>
+                <li> <b>git cherry-pick --abort</b> </li>
+            </ul>
+
+            <p>
+                Esto significa que puedes hacer las correcciones necesarias en tu rama local y volver a intentar el cherry-pick si así lo deseas.
+            </p>
 </html>
