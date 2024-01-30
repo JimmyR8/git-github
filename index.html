@@ -1502,4 +1502,89 @@
                 <li><b>git reset --soft HashDelHEAD</b> te mantiene lo que tengas en staging ahí.</li>
                 <li><b>git reset --hard HashDelHEAD</b> resetea absolutamente todo incluyendo lo que tengas en staging.</li>
             </ul>
+
+   <h1>Git & GitHub | Class #32</h1>
+
+   <h2>Reconstruir commits en Git con amend</h2>
+            <p>
+                Git amend es una forma que tienes para hacer cambios a tu commit más recientes<br>
+                sin tener que hacer un nuevo commit.
+            </p>
+
+    <h3>Recomendaciones en el uso de git amend</h3>
+            <p>
+                El comando de git <b>amend</b> se usa para modificar el último commit. Es decir, te<br>
+                permite “revisar” o “corregir” el último cambio confirmado que hayas hecho en tu proyecto.<br><br>
+
+                Por ejemplo, imagínate que acabas de hacer un commit, pero te diste cuenta de que<br>
+                no querías enviarlo porque faltaba algo más. En lugar de hacer un nuevo commit,<br>
+                puedes usar git commit --amend para agregar esos cambios al commit más reciente.<br>
+                Esto es útil porque mantiene tu historial de commits limpio y organizado.<br><br>
+
+                Usar <b>amend</b> es considerado una mala práctica, especialmente después de haber<br>
+                hecho push o <b>pull</b> al repositorio remoto. Al hacer <b>amend</b> con algún <b>commit</b><br>
+                que ya esté en remoto, se generará un conflicto que deberá resolverse con un <b>commit<br>
+                adicional</b>. En este proceso, se perderá el beneficio del <b>amend</b>.<br><br>
+
+                No utilizar <b>--amend</b> para reconstruir commits que ya se encuentran en el repositorio<br>
+                remoto. Esto sería una mala práctica.
+            </p>
+
+    <h3>¿Cómo hacer un git amend?</h3>
+            <p>
+                Utilizar <b>amend</b> para remendar un commit puede modificar el commit más reciente<br>
+                (enmendar) en la misma rama. Se ejecuta de la siguiente manera:
+            </p>
+
+            <ul>
+                <b>gitadd -A # Para hacer uso de amend los archivos deben de estar en staging <br>
+                git commit --amend # Remendar último commit</b>
+            </ul>
+
+    <h3>Para qué sirve git commit amend</h3>
+            <p>
+                Este comando sirve para agregar archivos nuevos o actualizar el commit anterior y no<br>
+                generar commits innecesarios. También es una forma sencilla de <b>editar o agregar<br>
+                comentarios al commit anterior</b> porque abrirá la consola para editar este commit anterior.
+            </p>
+
+    <h3>Reconstrucción de commits</h3>
+            <p>
+                Si el último commit que hicimos tenía un error, por ejemplo, de ortografía o quizá se<br>
+                nos olvidó agregar algo al código de ese commit podemos darle solución con el<br>
+                siguiente comando.<br><br>
+
+                → Modificar el mensaje del commit más reciente.
+            </p>
+
+            <ul>
+                <b>$ git commit --amend</b>
+            </ul>
+
+            <p>
+                → Modificar el commit más reciente y su mensaje en la misma línea.
+            </p>
+
+            <ul>
+                <b>$ git commit --amend -m</b>
+            </ul>
+
+            <p>
+                Recordar que <b>-m</b> permite escribir un mensaje desde la línea de comandos sin tener<br>
+                que abrir un editor.<br><br>
+
+                → Modificar el commit sin modificar el mensaje de dicho commit.
+            </p>
+
+            <ul>
+                <b>$ git commit --amend --no-edit</b>
+            </ul>
+
+            <p>
+                El indicador <b>--no-edit</b> permite hacer correcciones en el código sin modificar el<br>
+                mensaje original.<br><br>
+
+                Este comando es una manera práctica de modificar la información más reciente de<br>
+                nuestro repositorio.
+            </p>
 </html>
