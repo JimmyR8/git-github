@@ -1607,4 +1607,23 @@
                 <li>Si queremos buscar cuántas veces utilizamos un atributo de HTML lo hacemos con <b>git grep -c "etiqueta-a-buscar"</b>.</li>
             </ul>
 
+    <h1>Git & GitHub | Class #34</h1>
+
+    <h2>Comandos y recursos colaborativos en Git y GitHub</h2>
+            <p>
+                A continuación veremos una lista de comandos colaborativos para facilitar el trabajo<br>
+                remoto en GitHub:
+            </p>
+
+            <ul>
+                <li>Muestra cuantos commit han hecho cada miembro del equipo: <b>git shortlog -sn</b> </li>
+                <li>:Muestra cuantos commit han hecho cada miembro del equipo, hasta los que han sido eliminados <b>git shortlog -sn --all</b> </li>
+                <li>Muestra cuantos commit ha hecho cada miembro, quitando los eliminados sin los merges: <b>git shortlog -sn --all --no-merges</b> </li>
+                <li>Muestra quien hizo cada cosa línea por línea: <b>git blame (ARCHIVO)</b> </li>
+                <li>Muestra como funciona el comando: <b>git (COMANDO) --help</b> </li>
+                <li>Muestra quien hizo cada cosa línea por línea, indicándole desde qué línea ver. Ejemplo -L35,50: <b>git blame ARCHIVO -Llinea_inicial,linea_final</b> </li>
+                <li>Se muestran todas las ramas remotas: <b>git branch -r</b> </li>
+                <li>Se muestran todas las ramas, tanto locales como remotas: <b>git branch -a</b> </li>
+            </ul>
+</body>
 </html>
