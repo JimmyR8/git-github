@@ -1306,4 +1306,37 @@
                 <li>Borra el ultimo stash: <b>git stash drop</b> </li>
                 <li>Borra todos los stash: <b>git stash clear</b> </li>
             </ul>
+
+    <h1>Git & GitHub | Class #29</h1>
+
+    <h2>Git Clean: limpiar tu proyecto de archivos no deseados</h2>          
+            <p>
+                Mientras estamos trabajando en un repositorio podemos añadir archivos a él, que realmente no forma<br>
+                parte de nuestro directorio de trabajo, archivos que no se<br>
+                deberían de agregar al repositorio remoto.<br><br>
+
+                El comando clean actúa en archivos sin seguimiento, este tipo de archivos son<br>
+                aquellos que se encuentran en el directorio de trabajo, pero que aún no se han<br>
+                añadido al índice de seguimiento de repositorio con el comando add.
+            </p>
+
+            <ul>
+                <li> <b>git clean</b> </li>
+            </ul>
+
+            <p>
+                La ejecución del comando predeterminado puede producir un error. La configuración<br>
+                global de Git obliga a usar la opción force con el comando para que sea efectivo. Se<br>
+                trata de un importante mecanismo de seguridad ya que este comando no se puede deshacer.
+            </p>
+
+    <h3>Revisar que archivos no tienen seguimiento</h3>
+            <ul>
+                <li> <b>git clean --dry-run</b> </li>
+            </ul>
+            
+    <h3>Eliminar los archivos listados de no seguimiento</h3>
+            <ul>
+                <li> <b>git clean -f</b> </li>
+            </ul>
 </html>
